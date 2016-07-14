@@ -9,8 +9,9 @@ a {
 
 /***** Registration Page *****/
 
-.registration-form{
+.registration-form,
+.login-form{
     border: 1px solid black;
-    padding: 45px 45px 35px 45px;
+    padding: 45px 45px 25px 45px;
     margin: 20px 320px;
 }

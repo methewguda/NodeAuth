@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    h1.text-center Login Area
+    p.text-center Please login here
+    .login-form
+        form(method='post', action='/users/login', enctype='mutipart/form-data')
+            .form-group
+                label(for='username') Username:
+                input#username.form-control(name='username' type='text', placeholder='Enter you username here...')
+            .form-group
+                label(for='password') Password:
+                input#password.form-control(name='password' type='password', placeholder='Enter your password...')
+            .text-center
+                input.btn.btn-primary(name='submit' type='submit' value='Login')
