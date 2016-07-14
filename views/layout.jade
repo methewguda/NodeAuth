@@ -13,16 +13,20 @@ html
                         span.icon-bar
                         span.icon-bar
                         span.icon-bar
-                    a.navbar-brand(href='#') Project name
+                    a.navbar-brand(href='#') NodeAuth
                 #navbar.collapse.navbar-collapse
                     ul.nav.navbar-nav
-                        li.active
-                            a(href='#') Home
                         li
-                            a(href='#about') About
+                            a(href='/') Members
                         li
-                            a(href='#contact') Contact
-        block content
+                            a(href='/users/register') Register
+                        li
+                            a(href='/users/login') Login
+                    ul.nav.navbar-nav.navbar-right
+                        li
+                            a(href='/users/logout') Logout
+        .container
+            block content
 
         script(src='/javascripts/jquery.min.js')
         script(src='/javascripts/bootstrap.min.js')
