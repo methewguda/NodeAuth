@@ -1,0 +1,28 @@
+extends layout
+
+block content
+    h1.text-center Registration Area
+    p.text-center Please register here using the form below
+    .registration-form
+        form(method='post', action='/users/register', enctype='mutipart/form-data')
+            .form-group
+                label(for='name') Name:
+                input#name.form-control(name='name' type='text', placeholder='Enter your name here...')
+            .form-group
+                label(for='email') Email Address:
+                input#email.form-control(name='email' type='email', placeholder='Enter your email address here...')
+            .form-group
+                label(for='username') Username:
+                input#username.form-control(name='username' type='text', placeholder='Enter you username here...')
+            .form-group
+                label(for='password') Password:
+                input#password.form-control(name='password' type='password', placeholder='Enter your password...')
+            .form-group
+                label(for='password-repeat') Repeat Password:
+                input#password-repeat.form-control(name='password-repeat' type='password', placeholder='Repeat your password here...')
+            .form-group
+                label(for='image') Profile Picture:
+                input#image.form-control(name="name" type='file')
+                p.help-block File types: JPG, JPEG, TIFF, PNG, BMP, WEBP
+            .text-center
+                input.btn.btn-primary(name='submit' type='submit' value='Register')
