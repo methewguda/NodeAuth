@@ -20,4 +20,13 @@ router.get('/login', function (req, res, next) {
     });
 });
 
+router.post('users/register', function(req, res, next){
+    //Get the form values
+    var name = req.body.name;
+    var email = req.body.email;
+    var username = req.body.username;
+    var password = req.body.password;
+    var password_repeat = req.body.passpassword_repeat;
+});
+
 module.exports = router;
