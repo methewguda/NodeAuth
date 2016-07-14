@@ -45,6 +45,14 @@ router.post('users/register', function(req, res, next){
         var image_profile = 'default_image.png';
     }
 
+    //Form Validation
+    req.checkbody('name', 'Name filed is required...').notEmpty();
+    req.checkbody('email', 'Email address is required...').notEmpty();
+    req.checkbody('email', 'Email address is not valid...').isEmail();
+    req.checkbody('username', 'Username filed is required...').notEmpty();
+    req.checkbody('password', 'Passoword filed is required...').notEmpty();
+    req.checkbody('password_repeat', 'Passwords do not match...').equals(req.body.password);
+
 });
 
 module.exports = router;
